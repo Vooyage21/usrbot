@@ -50,7 +50,7 @@ upage = 0
 
 SUP_BUTTONS = [
     [
-        Button.url("• Support •", url="t.me/UltroidSupportChat"),
+        Button.url("Support", url="t.me/TemanDemus_Id"),
     ],
 ]
 
@@ -59,10 +59,10 @@ SUP_BUTTONS = [
 
 @in_pattern(owner=True, func=lambda x: not x.text)
 async def inline_alive(o):
-    TLINK = inline_pic() or "https://graph.org/file/74d6259983e0642923fdb.jpg"
-    MSG = "• **Ultroid Userbot •**"
+    TLINK = inline_pic() or "https://mallucampaign.in/images/img_1720360729.jpg"
+    MSG = "**Py-Team**"
     WEB0 = InputWebDocument(
-        "https://graph.org/file/acd4f5d61369f74c5e7a7.jpg", 0, "image/jpg", []
+        "https://mallucampaign.in/images/img_1720360729.jpg", []
     )
     RES = [
         await o.builder.article(
@@ -70,7 +70,7 @@ async def inline_alive(o):
             text=MSG,
             include_media=True,
             buttons=SUP_BUTTONS,
-            title="Ultroid Userbot",
+            title="Py-Team",
             description="Userbot | Telethon",
             url=TLINK,
             thumb=WEB0,
