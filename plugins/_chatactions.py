@@ -221,9 +221,10 @@ async def chatBot_replies(e):
             await e.delete()
 
 
-@ultroid_bot.on(events.Raw(types.UpdateUserName))
-async def uname_change(e):
-    await uname_stuff(e.user_id, e.usernames[0] if e.usernames else None, e.first_name)
+# @ultroid_bot.on(events.Raw(types.UpdateUserName))
+# async def uname_change(e):
+#     await uname_stuff(e.user_id, e.usernames[0] if e.usernames else None, e.first_name)
+# 
 
 
 async def uname_stuff(id, uname, name):
