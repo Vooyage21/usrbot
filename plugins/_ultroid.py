@@ -1,7 +1,7 @@
 # Ultroid - UserBot
 # Copyright (C) 2021-2023 TeamUltroid
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < @TemanDemus_Id/ >
 # PLease read the GNU Affero General Public License in
 # <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
@@ -13,17 +13,17 @@ from telethon.errors import (
 
 from . import LOG_CHANNEL, LOGS, Button, asst, eor, get_string, ultroid_cmd
 
-REPOMSG = """
+DevMSG = """
 • **ULTROID USERBOT** •\n
-• Repo - [Click Here](https://github.com/TeamUltroid/Ultroid)
-• Addons - [Click Here](https://github.com/TeamUltroid/UltroidAddons)
+• Dev - [Click Here](@TemanDemus_Id)
+• Addons - [Click Here](@TemanDemus_Id)
 • Support - @UltroidSupportChat
 """
 
 RP_BUTTONS = [
     [
-        Button.url(get_string("bot_3"), "https://github.com/TeamUltroid/Ultroid"),
-        Button.url("Addons", "https://github.com/TeamUltroid/UltroidAddons"),
+        Button.url(get_string("bot_3"), "@TemanDemus_Id"),
+        Button.url("Addons", "@TemanDemus_Id"),
     ],
     [Button.url("Support Group", "t.me/UltroidSupportChat")],
 ]
@@ -34,7 +34,7 @@ ULTSTRING = """🎇 **Thanks for Deploying Ultroid Userbot!**
 
 
 @ultroid_cmd(
-    pattern="repo$",
+    pattern="Dev$",
     manager=True,
 )
 async def repify(e):
@@ -49,8 +49,8 @@ async def repify(e):
     ):
         pass
     except Exception as er:
-        LOGS.info(f"Error while repo command : {str(er)}")
-    await e.eor(REPOMSG)
+        LOGS.info(f"Error while Dev command : {str(er)}")
+    await e.eor(DevMSG)
 
 
 @ultroid_cmd(pattern="ultroid$")
