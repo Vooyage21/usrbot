@@ -83,7 +83,7 @@ async def closet(lol):
     except MessageDeleteForbiddenError:
         await lol.answer("MESSAGE_TOO_OLD", alert=True)
 
-
+# cl user cmd 
 @asst_cmd(pattern="start( (.*)|$)", forwards=False, func=lambda x: not x.is_group)
 async def ultroid(event):
     args = event.pattern_match.group(1).strip()
