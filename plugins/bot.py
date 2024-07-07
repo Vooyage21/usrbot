@@ -70,7 +70,6 @@ def ULTPIC():
 
 buttons = [
     [
-        Button.url(get_string("bot_3"), "https://github.com/TeamUltroid/Ultroid"),
         Button.url(get_string("bot_4"), "t.me/TemanDemus_id"),
     ]
 ]
