@@ -28,7 +28,7 @@ from . import HOSTED_ON, LOGS
 try:
     from git import Repo
 except ImportError:
-    LOGS.error("bot: 'gitpython' module not found!")
+    LOGS.error("bot: 'Modul gitpython tidak ditemukan!")
     Repo = None
 
 from telethon.utils import resolve_bot_file_id
@@ -71,20 +71,20 @@ def ULTPIC():
 buttons = [
     [
         Button.url(get_string("bot_3"), "https://github.com/TeamUltroid/Ultroid"),
-        Button.url(get_string("bot_4"), "t.me/UltroidSupportChat"),
+        Button.url(get_string("bot_4"), "t.me/TemanDemus_id"),
     ]
 ]
 
 # Will move to strings
 alive_txt = """
-The Ultroid Userbot
+Dante Userbot
 
   ◍ Version - {}
-  ◍ Py-Ultroid - {}
+  ◍ Py-Dante - {}
   ◍ Telethon - {}
 """
 
-in_alive = "{}\n\n🌀 <b>Ultroid Version -><b> <code>{}</code>\n🌀 <b>PyUltroid -></b> <code>{}</code>\n🌀 <b>Python -></b> <code>{}</code>\n🌀 <b>Uptime -></b> <code>{}</code>\n🌀 <b>Branch -></b>[ {} ]\n\n• <b>Join @TeamUltroid</b>"
+in_alive = "{}\n\n🌀 <b>Dante Version -><b> <code>{}</code>\n🌀 <b>PyDante -></b> <code>{}</code>\n🌀 <b>Python -></b> <code>{}</code>\n🌀 <b>Uptime -></b> <code>{}</code>\n🌀 <b>Branch -></b>[ {} ]\n\n• <b>Join @TemanDemus_id</b>"
 
 
 @callback("alive")
@@ -246,7 +246,7 @@ async def _(event):
         if isinstance(file, dict):
             await event.eor(f"`{file}`")
             return
-        await event.reply("**Ultroid Logs.**", file=file)
+        await event.reply("**Dante Logs.**", file=file)
     elif opt == "open":
         with open("ultroid.log", "r") as f:
             file = f.read()[-4000:]
@@ -292,7 +292,7 @@ async def inline_alive(ult):
                     await builder.document(
                         pic,
                         title="Inline Alive",
-                        description="@TeamUltroid",
+                        description="@TeamAllBots",
                         parse_mode="html",
                         buttons=buttons,
                     )
@@ -326,7 +326,7 @@ async def _(e):
         x = await asst.send_file(
             udB.get_key("LOG_CHANNEL"),
             ULTPIC(),
-            caption="• **Update Available** •",
+            caption="• **Update Tersedia** •",
             force_document=False,
             buttons=Button.inline("Changelogs", data="changes"),
         )
@@ -338,7 +338,7 @@ async def _(e):
         )
     else:
         await xx.edit(
-            f'<code>Your BOT is </code><strong>up-to-date</strong><code> with </code><strong><a href="https://github.com/TeamUltroid/Ultroid/tree/{branch}">[{branch}]</a></strong>',
+            f'<code>Your BOT is </code><strong>up-to-date</strong><code> with </code><strong><a href="https://github.com/Vooyage21/usrbot/tree/{branch}">[{branch}]</a></strong>',
             parse_mode="html",
             link_preview=False,
         )
@@ -350,7 +350,7 @@ async def updava(event):
     await asst.send_file(
         udB.get_key("LOG_CHANNEL"),
         ULTPIC(),
-        caption="• **Update Available** •",
+        caption="• **Update Tersedia** •",
         force_document=False,
         buttons=Button.inline("Changelogs", data="changes"),
     )
