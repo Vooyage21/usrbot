@@ -35,30 +35,30 @@ if Owner_info_msg is None:
 
 _settings = [
     [
-        Button.inline("API Kᴇʏs", data="cbs_apiset"),
-        Button.inline("Pᴍ Bᴏᴛ", data="cbs_chatbot"),
+        Button.inline("API Key", data="cbs_apiset"),
+        Button.inline("PM Bot", data="cbs_chatbot"),
     ],
     [
-        Button.inline("Aʟɪᴠᴇ", data="cbs_alvcstm"),
-        Button.inline("PᴍPᴇʀᴍɪᴛ", data="cbs_ppmset"),
+        Button.inline("Alive", data="cbs_alvcstm"),
+        Button.inline("PM", data="cbs_ppmset"),
     ],
     [
-        Button.inline("Fᴇᴀᴛᴜʀᴇs", data="cbs_otvars"),
-        Button.inline("VC Sᴏɴɢ Bᴏᴛ", data="cbs_vcb"),
+        Button.inline("Fitur", data="cbs_otvars"),
+        Button.inline("VC Tools", data="cbs_vcb"),
     ],
-    [Button.inline("« Bᴀᴄᴋ", data="mainmenu")],
+    [Button.inline("kembali", data="mainmenu")],
 ]
 
 _start = [
     [
-        Button.inline("Lᴀɴɢᴜᴀɢᴇ 🌐", data="lang"),
-        Button.inline("Sᴇᴛᴛɪɴɢs ⚙️", data="setter"),
+        Button.inline("Lang 🌐", data="lang"),
+        Button.inline("Pengaturan ⚙️", data="setter"),
     ],
     [
-        Button.inline("Sᴛᴀᴛs ✨", data="stat"),
-        Button.inline("Bʀᴏᴀᴅᴄᴀsᴛ 📻", data="bcast"),
+        Button.inline("Stats ✨", data="stat"),
+        Button.inline("Gcast 📻", data="bcast"),
     ],
-    [Button.inline("TɪᴍᴇZᴏɴᴇ 🌎", data="tz")],
+    [Button.inline("Waktu 🌎", data="tz")],
 ]
 
 
