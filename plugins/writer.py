@@ -28,7 +28,7 @@ async def ghtml(e):
     if txt := e.pattern_match.group(1).strip():
         link = e.text.split(maxsplit=1)[1]
     else:
-        return await eod(e, "`Either reply to any file or give any text`")
+        return await eod(e, "`Berikan balasan file atau teks...`")
     k = await async_searcher(link)
     with open("file.html", "w+") as f:
         f.write(k)
@@ -48,7 +48,7 @@ async def f2i(e):
         elif r.text:
             html = r.text
     if not html:
-        return await eod(e, "`Either reply to any file or give any text`")
+        return await eod(e, "`Berikan balasan file atau teks...`")
     html = html.replace("\n", "<br>")
     shot = WebShot(quality=85)
     css = "body {background: white;} p {color: red;}"
