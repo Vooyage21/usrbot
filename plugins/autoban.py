@@ -43,7 +43,7 @@ async def _(event):
     match = event.pattern_match.group(1)
     if match == "on":
         if Keym.contains(event.chat_id):
-            return await event.eor("`Chat already in do not disturb mode.`", time=3)
+            return await event.eor("`Obrolan sudah dalam mode jangan ganggu.`", time=3)
         Keym.add(event.chat_id)
         event.client.add_handler(dnd_func, events.ChatAction(func=join_func))
         await event.eor("`Do not disturb mode activated for this chat.`", time=3)
