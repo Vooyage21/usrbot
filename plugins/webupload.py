@@ -29,7 +29,7 @@ async def _(event):
         _webupload_cache.update({int(event.chat_id): {}})
     if match:
         if not os.path.exists(match):
-            return await xx.eor("`File doesn't exist.`")
+            return await xx.eor("`Berkas tidak ada.`")
         _webupload_cache[event.chat_id][event.id] = match
     elif event.reply_to_msg_id:
         reply = await event.get_reply_message()
@@ -66,4 +66,4 @@ async def _(event):
                 Button.inline("siasky", data=f"flsiasky//{__cache}"),
             ],
         ]
-        await xx.edit("**Choose Server to Upload File...**", buttons=buttons)
+        await xx.edit("**Pilih server untuk mengunggah file...**", buttons=buttons)
