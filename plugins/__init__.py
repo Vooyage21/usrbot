@@ -74,7 +74,7 @@ NOSPAM_CHAT = [
 KANGING_STR = [
     "Menggunakan Sihir untuk memasang stiker ini...",
     "Menjiplak hehe...",
-    "masukkan stiker ini ke paket saya...,
+    "masukkan stiker ini ke paket saya..."
     "jadikan stiker ini...",
     "Hei, itu stiker yang bagus!\nBolehkah aku ambil?!..",
     "Hehe, aku ambil stikermu...",
