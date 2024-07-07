@@ -72,7 +72,7 @@ async def mean(event):
     try:
         wrd = event.text.split(maxsplit=1)[1]
     except IndexError:
-        return await event.eor("Give Something to search..")
+        return await event.eor("Berikan sesuatu untuk dicari..")
     try:
         ok = await get_synonyms_or_antonyms(wrd, task)
         x = get_string("wrd_2" if task == "synonyms" else "wrd_3").format(wrd)
