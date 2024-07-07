@@ -153,6 +153,7 @@ async def setting(event):
             [Button.inline("Back", data="open")],
         ],
         ]
+    )
 
 
 _strings = {"Official": helps, "Addons": zhelps, "VCBot": get_string("inline_6")}
