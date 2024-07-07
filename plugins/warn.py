@@ -52,7 +52,7 @@ async def warn(e):
             else:
                 user = int(user)
         except BaseException:
-            return await e.eor("Reply To A User", time=5)
+            return await e.eor("Membalas ke pengguna", time=5)
         try:
             reason = e.text.split(maxsplit=2)[-1]
         except BaseException:
@@ -71,19 +71,19 @@ async def warn(e):
             try:
                 await ultroid_bot.edit_permissions(e.chat_id, user, view_messages=False)
             except BaseException:
-                return await e.eor("`Something Went Wrong.`", time=5)
+                return await e.eor("`Ada yang salah.`", time=5)
         elif "kick" in action:
             try:
                 await ultroid_bot.kick_participant(e.chat_id, user)
             except BaseException:
-                return await e.eor("`Something Went Wrong.`", time=5)
+                return await e.eor("`Ada yang salah.`", time=5)
         elif "mute" in action:
             try:
                 await ultroid_bot.edit_permissions(
                     e.chat_id, user, until_date=None, send_messages=False
                 )
             except BaseException:
-                return await e.eor("`Something Went Wrong.`", time=5)
+                return await e.eor("`Ada yang salah`", time=5)
         add_warn(e.chat_id, user, count + 1, r)
         c, r = warns(e.chat_id, user)
         ok = await ultroid_bot.get_entity(user)
@@ -99,7 +99,7 @@ async def warn(e):
     user = inline_mention(ok)
     await eor(
         e,
-        f"**WARNING :** {count+1}/{number}\n**To :**{user}\n**Be Careful !!!**\n\n**Reason** : {reason}",
+        f"**PERINGATAN! :** {count+1}/{number}\n**To :**{user}\n**Hati-hati !!!**\n\n**Alasan** : {reason}",
     )
 
 
@@ -122,11 +122,11 @@ async def rwarn(e):
             else:
                 user = int(user)
         except BaseException:
-            return await e.eor("Reply To user")
+            return await e.eor("Membalas ke pengguna")
     reset_warn(e.chat_id, user)
     ok = await e.client.get_entity(user)
     user = inline_mention(ok)
-    await e.eor(f"Cleared All Warns of {user}.")
+    await e.eor(f"Dihapus semua peringatan of {user}.")
 
 
 @ultroid_cmd(
@@ -148,7 +148,7 @@ async def twarns(e):
             else:
                 user = int(user)
         except BaseException:
-            return await e.eor("Reply To A User", time=5)
+            return await e.eor("Membalas ke pengguna", time=5)
     c, r = warns(e.chat_id, user)
     if c and r:
         ok = await e.client.get_entity(user)
@@ -159,7 +159,7 @@ async def twarns(e):
             text += f"•**{x+1}.** {r[x]}\n"
         await e.eor(text)
     else:
-        await e.eor("`No Warnings`")
+        await e.eor("`Tidak ada peringatan`")
 
 
 @ultroid_cmd(pattern="setwarn( (.*)|$)", manager=True)
@@ -175,6 +175,6 @@ async def warnset(e):
         if ("ban" or "kick" or "mute") not in action:
             return await e.eor("`Only mute / ban / kick option suported`", time=5)
         udB.set_key("SETWARN", f"{number} {action}")
-        await e.eor(f"Done Your Warn Count is now {number} and Action is {action}")
+        await e.eor(f"Jumlah peringatan Anda saat ini {number} Tindakan menjadi is {action}")
     else:
         await e.eor(get_string("schdl_2"), time=5)
