@@ -545,7 +545,7 @@ async def progress(current, total, event, start, type_of_ps, file_name=None):
 
         tmp = (
             progress_str
-            + "`{0} of {1}`\n\n`✦ Speed: {2}/s`\n\n`✦ ETA: {3}`\n\n".format(
+            + "`{0} of {1}`\n\n`Speed: {2}/s`\n\n` ETA: {3}`\n\n".format(
                 humanbytes(current),
                 humanbytes(total),
                 humanbytes(speed),
@@ -554,10 +554,10 @@ async def progress(current, total, event, start, type_of_ps, file_name=None):
         )
         if file_name:
             await event.edit(
-                "`✦ {}`\n\n`File Name: {}`\n\n{}".format(type_of_ps, file_name, tmp)
+                "` {}`\n\n`File Name: {}`\n\n{}".format(type_of_ps, file_name, tmp)
             )
         else:
-            await event.edit("`✦ {}`\n\n{}".format(type_of_ps, tmp))
+            await event.edit("` {}`\n\n{}".format(type_of_ps, tmp))
 
 
 # ------------------System\\Heroku stuff----------------
