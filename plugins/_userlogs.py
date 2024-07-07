@@ -257,7 +257,7 @@ async def leave_ch_at(event):
         pass
     except ChannelPrivateError:
         return await event.edit(
-            "`[CANT_ACCESS_CHAT]` `Maybe already left or got banned.`"
+            "`[CANT_ACCESS_CHAT]` `Mungkin sudah keluar atau kena banned.`"
         )
     except Exception as er:
         LOGS.exception(er)
