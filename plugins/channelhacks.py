@@ -157,9 +157,9 @@ async def destination(e):
         y = e.chat_id
     if not DestiM.contains(y):
         DestiM.add(y)
-        await e.eor("Destination added succesfully")
+        await e.eor("Channel berhasil ditambahkan")
     else:
-        await e.eor("Destination channel already added")
+        await e.eor("Channel tujuan sudah ditambahkan")
 
 
 @ultroid_cmd(pattern="ddest( (.*)|$)")
@@ -169,7 +169,7 @@ async def dd(event):
     if chat_id == "all":
         await x.edit(get_string("bd_8"))
         udB.del_key("CH_DESTINATION")
-        await x.edit("Destinations database cleared.")
+        await x.edit("Basis data tujuan dihapus.")
         return
     if chat_id:
         try:
@@ -181,9 +181,9 @@ async def dd(event):
         y = event.chat_id
     if DestiM.contains(y):
         DestiM.remove(y)
-        await eor(x, "Destination removed from database")
+        await eor(x, "Channel dihapus dari database")
     else:
-        await eor(x, "Destination channel is already removed from database. ", time=5)
+        await eor(x, "Channel tujuan sudah dihapus dari database. ", time=5)
 
 
 @ultroid_cmd(pattern="listdest")
