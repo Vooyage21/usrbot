@@ -125,7 +125,7 @@ _copied_msg = {}
 
 @ultroid_cmd(pattern="kickme$", fullsudo=True)
 async def leave(ult):
-    await ult.eor(f"`{ult.client.me.first_name} has left this group, bye!!.`")
+    await ult.eor(f"`{ult.client.me.first_name} Gua cabut dari gc jamet, bye met!!.`")
     await ult.client(LeaveChannelRequest(ult.chat_id))
 
 
@@ -336,18 +336,18 @@ async def _(event):
     else:
         dc_id = "Need a Profile Picture to check this"
     caption = """<b>Exᴛʀᴀᴄᴛᴇᴅ Dᴀᴛᴀ Fʀᴏᴍ Tᴇʟᴇɢʀᴀᴍ's Dᴀᴛᴀʙᴀsᴇ<b>
-<b>••Tᴇʟᴇɢʀᴀᴍ ID</b>: <code>{}</code>
-<b>••Pᴇʀᴍᴀɴᴇɴᴛ Lɪɴᴋ</b>: <a href='tg://user?id={}'>Click Here</a>
-<b>••Fɪʀsᴛ Nᴀᴍᴇ</b>: <code>{}</code>
-<b>••Sᴇᴄᴏɴᴅ Nᴀᴍᴇ</b>: <code>{}</code>
-<b>••Bɪᴏ</b>: <code>{}</code>
-<b>••Dᴄ ID</b>: <code>{}</code>
-<b>••Nᴏ. Oғ PғPs</b> : <code>{}</code>
-<b>••Is Rᴇsᴛʀɪᴄᴛᴇᴅ</b>: <code>{}</code>
-<b>••Vᴇʀɪғɪᴇᴅ</b>: <code>{}</code>
-<b>••Is Pʀᴇᴍɪᴜᴍ</b>: <code>{}</code>
-<b>••Is A Bᴏᴛ</b>: <code>{}</code>
-<b>••Gʀᴏᴜᴘs Iɴ Cᴏᴍᴍᴏɴ</b>: <code>{}</code>
+<b>••ᴛᴇʟᴇɢʀᴀᴍ ɪᴅ</b>: <code>{}</code>
+<b>••ʟɪɴᴋ</b>: <a href='tg://user?id={}'>Click Here</a>
+<b>••ꜰɪʀꜱᴛ ɴᴀᴍᴇ</b>: <code>{}</code>
+<b>••ꜱᴇᴄᴏɴᴅ ɴᴀᴍᴇ</b>: <code>{}</code>
+<b>••ʙɪᴏ</b>: <code>{}</code>
+<b>••ᴅᴄ ɪᴅ</b>: <code>{}</code>
+<b>••ɴᴏ. ᴏꜰ ᴘꜰᴘꜱ</b> : <code>{}</code>
+<b>••ɪꜱ ʀᴇꜱᴛʀɪᴄᴛᴇᴅ</b>: <code>{}</code>
+<b>••ᴠᴇʀɪꜰɪᴇᴅ</b>: <code>{}</code>
+<b>••ɪꜱ ᴘʀᴇᴍɪᴜᴍ</b>: <code>{}</code>
+<b>••ɪꜱ ᴀ ʙᴏᴛ</b>: <code>{}</code>
+<b>••ɢʀᴏᴜᴘꜱ ɪɴ ᴄᴏᴍᴍᴏɴ</b>: <code>{}</code>
 """.format(
         user_id,
         user_id,
@@ -363,8 +363,8 @@ async def _(event):
         common_chats,
     )
     if chk := is_gbanned(user_id):
-        caption += f"""<b>••Gʟᴏʙᴀʟʟʏ Bᴀɴɴᴇᴅ</b>: <code>True</code>
-<b>••Rᴇᴀsᴏɴ</b>: <code>{chk}</code>"""
+        caption += f"""<b>••ɢɪʙᴇɴ ʙᴏᴄᴀʜ ᴊᴀᴍᴇᴛ..!</b>: <code>True</code>
+<b>••ᴀʟᴀꜱᴀɴ</b>: <code>{chk}</code>"""
     await event.client.send_message(
         event.chat_id,
         caption,
@@ -394,7 +394,7 @@ async def _(ult):
                         fwd_limit=1000000,
                     ),
                 )
-                await xx.edit(f"Successfully invited `{user_id}` to `{ult.chat_id}`")
+                await xx.edit(f"Berhasil diundang `{user_id}` to `{ult.chat_id}`")
             except Exception as e:
                 await xx.edit(str(e))
     else:
@@ -406,10 +406,10 @@ async def _(ult):
                         users=[await ult.client.parse_id(user_id)],
                     ),
                 )
-                await xx.edit(f"Successfully invited `{user_id}` to `{ult.chat_id}`")
+                await xx.edit(f"Berhasil diundang `{user_id}` to `{ult.chat_id}`")
             except UserBotError:
                 await xx.edit(
-                    f"Bots can only be added as Admins in Channel.\nBetter Use `{HNDLR}promote {user_id}`"
+                    f"Bot hanya dapat ditambahkan sebagai Admin di Saluran.\nBetter Use `{HNDLR}promote {user_id}`"
                 )
             except Exception as e:
                 await xx.edit(str(e))
