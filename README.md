@@ -35,10 +35,10 @@ Get the [Necessary Variables](#Necessary-Variables) and then click the button be
 
 ### Local Deploy 
 
-`git clone https://github.com/.git`
-`cd Ultroid`
+`git clone https://github.com/.git`\n
+`cd Ultroid`\n
 `virtualenv -p /usr/bin/python3 venv`
-`. ./venv/bin/activate`
+`. ./venv/bin/activate`\n
 - Install the requirements:      
 `pip3 install -U -r re*/st*/optional-requirements.txt`
 
