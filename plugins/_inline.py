@@ -152,7 +152,6 @@ async def setting(event):
                 Button.inline("Stats", data="alive"),
             [Button.inline("Back", data="open")],
         ],
-        ]
     )
 
 
@@ -320,7 +319,7 @@ def page_num(index, key):
     rows = udB.get_key("HELP_ROWS") or 5
     cols = udB.get_key("HELP_COLUMNS") or 2
     loaded = HELP.get(key, [])
-    emoji = udB.get_key("EMOJI_IN_HELP") or "✘"
+    emoji = udB.get_key("EMOJI_IN_HELP") or ""
     List = [
         Button.inline(f"{emoji} {x} {emoji}", data=f"uplugin_{key}_{x}|{index}")
         for x in sorted(loaded)
@@ -355,7 +354,7 @@ def page_num(index, key):
 
 
 STUFF = {}
-
+DAF = {}
 
 @in_pattern("stf(.*)", owner=True)
 async def ibuild(e):
@@ -367,6 +366,7 @@ async def ibuild(e):
     txt = ok.get("msg")
     pic = ok.get("media")
     btn = ok.get("button")
+    inline = ok.get("Inline")
     if not (pic or txt):
         txt = "Hey!"
     if pic:
