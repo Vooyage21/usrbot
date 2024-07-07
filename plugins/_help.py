@@ -14,6 +14,8 @@ from . import HNDLR, LOGS, OWNER_NAME, asst, get_string, inline_pic, udB, ultroi
 _main_help_menu = [
     [
         Button.inline(get_string("help_4"), data="uh_Official_"),
+    ],
+    [  
         Button.inline(get_string("help_5"), data="uh_Addons_"),
         Button.inline(get_string("help_6"), data="uh_VCBot_"),
     ],
@@ -105,7 +107,7 @@ async def _help(ult):
                 z.extend(x)
             cmd = len(z) + 10
             if udB.get_key("MANAGER") and udB.get_key("DUAL_HNDLR") == "/":
-                _main_help_menu[2:3] = [[Button.inline("• Manager Help •", "mngbtn")]]
+                _main_help_menu[2:3] = [[Button.inline("Manager Help", "mngbtn")]]
             return await ult.reply(
                 get_string("inline_4").format(
                     OWNER_NAME,
