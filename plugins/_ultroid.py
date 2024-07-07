@@ -24,9 +24,8 @@ RP_BUTTONS = [
     [
         Button.url(get_string("bot_3"), "@TemanDemus_Id"),
         Button.url("Addons", "@TemanDemus_Id"),
-    ],
-    [Button.url("Support Group", "t.me/UltroidSupportChat")],
-]
+        ]
+        ]
 
 ULTSTRING = """🎇 **Thanks for Deploying Ultroid Userbot!**
 
