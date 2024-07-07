@@ -116,7 +116,7 @@ async def _(e):
             link = Inv.link
     if link:
         return await e.eor(f"Link:- {link}")
-    await e.eor("`Failed to getlink!\nSeems like link is inaccessible to you...`")
+    await e.eor("`Gagal mendapatkan tautan!\nSepertinya tautan tidak dapat Anda akses...`")
 
 
 @ultroid_cmd(
