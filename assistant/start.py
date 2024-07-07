@@ -29,7 +29,7 @@ if Owner_info_msg is None:
 
 **Message Forwards** - {udB.get_key("PMBOT")}
 
-**Ultroid [v{ultroid_version}](https://github.com/TeamUltroid/Ultroid), powered by @TeamUltroid**
+**Dante [v{ultroid_version}](https://t.me.TemanDemus_id, powered by @TeamAllbots**
 """
 
 
@@ -51,7 +51,7 @@ _settings = [
 
 _start = [
     [
-        Button.inline("Lang 🌐", data="lang"),
+        Button.inline("Langs 🌐", data="lang"),
         Button.inline("Pengaturan ⚙️", data="setter"),
     ],
     [
@@ -68,7 +68,7 @@ async def own(event):
         mention=event.sender.mention, me=inline_mention(ultroid_bot.me)
     )
     if custom_info:
-        msg += "\n\n• Powered by **@TeamUltroid**"
+        msg += "\n\n• Powered by **@TeamAllBots**"
     await event.edit(
         msg,
         buttons=[Button.inline("Close", data="closeit")],
@@ -111,9 +111,9 @@ async def ultroid(event):
             await get_stored_file(event, args)
         if not udB.get_key("STARTMSG"):
             if udB.get_key("PMBOT"):
-                ok = "You can contact my master using this bot!!\n\nSend your Message, I will Deliver it To Master."
+                ok = "Lu hubungin bos gua pake bot ini!!!!\n\nKirim pesan lu, nanti gua infoin ke bos gua!" 
             await event.reply(
-                f"Hey there {mention}, this is Ultroid Assistant of {me}!\n\n{ok}",
+                f"Hey there {mention}, Ini Gua Asisten Bot PyDante {me}!\n\n{ok}",
                 file=udB.get_key("STARTMEDIA"),
                 buttons=[Button.inline("Info.", data="ownerinfo")]
                 if Owner_info_msg
@@ -145,7 +145,7 @@ async def ultroid(event):
 
 @callback("itkkstyo", owner=True)
 async def ekekdhdb(e):
-    text = f"When New Visitor will visit your Assistant Bot. You will get this log message!\n\nTo Disable : {HNDLR}setdb OFF_START_LOG True"
+    text = f"Ada pengunjung baru cek Asisten Bot lu nih. Lu dapat pesan infonya pesan di log ini!\n\nNonaktifkan : {HNDLR}setdb OFF_START_LOG True"
     await e.answer(text, alert=True)
 
 
@@ -160,7 +160,7 @@ async def ultroid(event):
 @callback("stat", owner=True)
 async def botstat(event):
     ok = len(udB.get_key("BOT_USERS") or [])
-    msg = """Ultroid Assistant - Stats
+    msg = """PyDante Asisten - Stats
 Total Users - {}""".format(
         ok,
     )
@@ -174,14 +174,14 @@ async def bdcast(event):
     await event.edit(f"• Broadcast to {total} users.")
     async with event.client.conversation(OWNER_ID) as conv:
         await conv.send_message(
-            "Enter your broadcast message.\nUse /cancel to stop the broadcast.",
+            "Masukkin pesan gikes dulu bloggg!\nUse /Batalin gikesan lu nih!!",
         )
         response = await conv.get_response()
         if response.message == "/cancel":
             return await conv.send_message("Cancelled!!")
         success = 0
         fail = 0
-        await conv.send_message(f"Starting a broadcast to {total} users...")
+        await conv.send_message(f"Mulai kirim gikesan lu ke {total} users...")
         start = datetime.now()
         for i in keym.get():
             try:
@@ -193,10 +193,10 @@ async def bdcast(event):
         time_taken = (end - start).seconds
         await conv.send_message(
             f"""
-**Broadcast completed in {time_taken} seconds.**
-Total Users in Bot - {total}
-**Sent to** : `{success} users.`
-**Failed for** : `{fail} user(s).`""",
+**Gikesan lu udah selesai {time_taken} seconds.**
+Total Pengguna di Bot - {total}
+**Dikirim ke** : `{success} users.`
+**Gagal ke** : `{fail} user(s).`""",
         )
 
 
