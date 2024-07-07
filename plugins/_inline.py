@@ -50,7 +50,6 @@ upage = 0
 
 SUP_BUTTONS = [
     [
-        Button.url("• Repo •", url="https://github.com/TeamUltroid/Ultroid"),
         Button.url("• Support •", url="t.me/UltroidSupportChat"),
     ],
 ]
@@ -146,14 +145,12 @@ async def setting(event):
         link_preview=False,
         buttons=[
             [
-                Button.inline("•Pɪɴɢ•", data="pkng"),
-                Button.inline("•Uᴘᴛɪᴍᴇ•", data="upp"),
+                Button.inline("Ping", data="pkng"),
+                Button.inline("Waktu", data="upp"),
             ],
             [
-                Button.inline("•Stats•", data="alive"),
-                Button.inline("•Uᴘᴅᴀᴛᴇ•", data="doupdate"),
-            ],
-            [Button.inline("« Bᴀᴄᴋ", data="open")],
+                Button.inline("Stats", data="alive"),
+            [Button.inline("Back", data="open")],
         ],
     )
 
@@ -204,7 +201,7 @@ async def uptd_plugin(event):
         buttons.append(
             [
                 Button.inline(
-                    "« Sᴇɴᴅ Pʟᴜɢɪɴ »",
+                    "Kirim Plugins",
                     data=data,
                 )
             ]
@@ -214,7 +211,7 @@ async def uptd_plugin(event):
         data += f"|{index}"
     buttons.append(
         [
-            Button.inline("« Bᴀᴄᴋ", data=data),
+            Button.inline("Back", data=data),
         ]
     )
     try:
@@ -245,7 +242,7 @@ async def _(event):
             file="ultroid_updates.txt",
             buttons=[
                 [Button.inline("• Uᴘᴅᴀᴛᴇ Nᴏᴡ •", data="updatenow")],
-                [Button.inline("« Bᴀᴄᴋ", data="ownr")],
+                [Button.inline("Back", data="ownr")],
             ],
         )
         remove("ultroid_updates.txt")
@@ -254,7 +251,7 @@ async def _(event):
             changelog_str,
             buttons=[
                 [Button.inline("Update Now", data="updatenow")],
-                [Button.inline("« Bᴀᴄᴋ", data="ownr")],
+                [Button.inline("Back", data="ownr")],
             ],
             parse_mode="html",
         )
@@ -287,7 +284,7 @@ async def _(e):
     button = InButtons.copy()
     button.append(
         [
-            Button.inline("« Bᴀᴄᴋ", data="open"),
+            Button.inline("Back", data="open"),
         ],
     )
     await e.edit(buttons=button, link_preview=False)
@@ -335,15 +332,15 @@ def page_num(index, key):
         new_ = fl_[0] if fl_ else []
         index = 0
     if index == 0 and len(fl_) == 1:
-        new_.append([Button.inline("« Bᴀᴄᴋ »", data="open")])
+        new_.append([Button.inline("Back »", data="open")])
     else:
         new_.append(
             [
                 Button.inline(
-                    "« Pʀᴇᴠɪᴏᴜs",
+                    "Pʀᴇᴠɪᴏᴜs",
                     data=f"uh_{key}_{index-1}",
                 ),
-                Button.inline("« Bᴀᴄᴋ »", data="open"),
+                Button.inline("Back »", data="open"),
                 Button.inline(
                     "Nᴇxᴛ »",
                     data=f"uh_{key}_{index+1}",
