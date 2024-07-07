@@ -8,16 +8,16 @@
 ✘ Commands Available -
 
 • `{i}startvc`
-    Start Group Call in a group.
+    Mengaktifkan obrolan suara.
 
 • `{i}stopvc`
-    Stop Group Call in a group.
+    Mematikan obrolan suara.
 
 • `{i}vctitle <title>`
-    Change the title Group call.
+    Mengganti judul obrolan suara.
 
 • `{i}vcinvite`
-    Invite all members of group in Group Call.
+    Mengundang anggota ke obrolan suara.
     (You must be joined)
 """
 
