@@ -361,7 +361,7 @@ async def fastpurgerme(purg):
     elif not purg.reply_to_msg_id:
         return await eod(
             purg,
-            "`Reply to a message to purge from or use it like ``purgeme <num>`",
+            "`Balas pesan untuk menghapusnya atau menggunakannya seperti itu ``purgeme <num>`",
             time=10,
         )
     chat = await purg.get_input_chat()
