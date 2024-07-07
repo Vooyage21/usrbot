@@ -152,7 +152,8 @@ async def setting(event):
                 Button.inline("Stats", data="alive"),
             [Button.inline("Back", data="open")],
         ],
-    )
+        ]
+        )
 
 
 _strings = {"Official": helps, "Addons": zhelps, "VCBot": get_string("inline_6")}
@@ -254,7 +255,7 @@ async def _(event):
                 [Button.inline("Back", data="ownr")],
             ],
             parse_mode="html",
-        )
+            )
 
 
 @callback(data="pkng", owner=True)
