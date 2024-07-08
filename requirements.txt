@@ -3,4 +3,3 @@ python-decouple
 python-dotenv
 emoji
 mediainfo
-telethon
