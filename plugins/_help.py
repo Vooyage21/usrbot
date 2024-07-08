@@ -21,7 +21,7 @@ _main_help_menu = [
     ],
     [
         Button.url(
-            get_string("Owner", url="https://t.me/Usern4meDoesNotExist404"),
+            get_string("Owner", url="https://t.me/Usern4meDoesNotExist404")
         Button.inline(get_string("help_7"), data="inlone"),
     ],
     [
