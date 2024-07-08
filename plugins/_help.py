@@ -14,8 +14,6 @@ from . import HNDLR, LOGS, OWNER_NAME, asst, get_string, inline_pic, udB, ultroi
 _main_help_menu = [
     [
         Button.url(get_string("Owner", url="https://t.me/Usern4meDoesNotExist404"),
-    ],
-    [
         Button.inline(get_string("help_4"), data="uh_Official_"),
     ],
     [  
