@@ -1,6 +1,6 @@
 import os
 import sys
-import telethonpatch
+import telethon
 from .version import __version__
 
 run_as_module = __package__ in sys.argv or sys.argv[0] == "-m"
